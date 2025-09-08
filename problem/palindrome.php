@@ -1,5 +1,6 @@
 <?php 
 
+    // palindrome means reverse string. If reverse string is same as original string then it is palindrome
     function palindrome($string){
       
       $str = strtolower(preg_replace("/[^A-Za-z0-9]/","",$string));
