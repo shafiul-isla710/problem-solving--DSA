@@ -2,7 +2,7 @@
 
 // singleton design pattern means that only one instance of a class can be created
 class Someclass{
-    static $instance;
+    public $instance;
     public $params;
     public function __construct($params){
         $this->params = $params;
@@ -11,8 +11,8 @@ class Someclass{
     }
     
     public static function getInstance($params){
-        if(self::$instance ==  null){
-            self::$instance = new Someclass($params);
+        if($this->instance ==  null){
+            $this->instance = new Someclass($params);
         }
     }
 }
